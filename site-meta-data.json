@@ -1,9 +1,9 @@
 {
-  "title": "Saugaat",
-  "siteUrl": "https://saugaat.netlify.app/",
-  "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
+  "title": "Saugaat Allabadi",
+  "siteUrl": "https://saugaat.me",
+  "description": "I dream. I code.",
   "home": {
     "title": "Hi! I'm Saugaat",
-    "description": "I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)"
+    "description": "I'm a software engineer, technical writer, and open source creator. This website is a compendium of the things I have learned over the years, and also my \"digital garden\". I aim to create a beautiful corner of the web free of ads, sponsored posts, newsletter pop-ups, affiliate links, and the rest of the annoying noise we're so accustomed to seeing on the internet these days. You can read my posts, view my development guides, or contact me at <b>saugaatallabadi@gmail.com</b>"
   }
 }
