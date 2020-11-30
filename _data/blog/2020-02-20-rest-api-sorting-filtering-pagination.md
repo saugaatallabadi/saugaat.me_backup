@@ -124,7 +124,7 @@ Filtering is by far the most complex of the three. There are several ways to han
 Some API will attempt to put everything on a single `filter` parameter, like this:
 
 ```
-GET users?filter={"first_name":["Tania","Joe"],"age":[30,31,32]}
+GET users?filter={"first_name":["Saugaat","Joe"],"age":[30,31,32]}
 ```
 
 However, this will have to be URI encoded.
@@ -136,12 +136,12 @@ I've opted for treating each parameter as a column in the database.
 Exact search by a single column.
 
 ```
-GET /users?first_name=Tania
+GET /users?first_name=Saugaat
 ```
 
 ```
 SELECT * FROM users
-WHERE first_name = 'Tania'
+WHERE first_name = 'Saugaat'
 ```
 
 ### [](https://www.taniarascia.com/#string-exact-multiple)String (exact, multiple)
@@ -149,21 +149,21 @@ WHERE first_name = 'Tania'
 Depending on how you want to handle the API, multiple options for a single column can be handled [in different ways](https://stackoverflow.com/questions/24059773/correct-way-to-pass-multiple-values-for-same-parameter-name-in-get-request). If splitting by comma isn't an issue, it might be the easiest. You might also just want to repeat the parameter name or use a custom delimiter.
 
 ```
-GET /users?first_name=Tania,Joe
-GET /users?first_name=Tania&first_name=Joe
-GET /users?first_name[]=Tania&first_name[]=Joe
+GET /users?first_name=Saugaat,Joe
+GET /users?first_name=Saugaat&first_name=Joe
+GET /users?first_name[]=Saugaat&first_name[]=Joe
 ```
 
 ```
 SELECT * FROM users
-WHERE first_name IN ('Tania', 'Joe')
+WHERE first_name IN ('Saugaat', 'Joe')
 ```
 
 > Some systems might require using `[]` for multiple parameters of the same name, and some might now allow `[]`, so I provided both options.
 
 ### [](https://www.taniarascia.com/#string-partial)String (partial)
 
-Often, searches are expected to be partial, so that when I look for "Tan" it will show me "Tania" and "Tanner". The solution I liked was using `like:Tan` as value as opposed to modifying the parameter (such as `first_name[like]=Tan`).
+Often, searches are expected to be partial, so that when I look for "Sa" it will show me "Saugaat" and "Samrat". The solution I liked was using `like:Sa` as value as opposed to modifying the parameter (such as `first_name[like]=Sa`).
 
 ```
 GET /users?first_name=like:Tan
@@ -171,7 +171,7 @@ GET /users?first_name=like:Tan
 
 ```
 SELECT * FROM users
-WHERE first_name LIKE '%Tan%'
+WHERE first_name LIKE '%Sa%'
 ```
 
 ### [](https://www.taniarascia.com/#number-exact)Number (exact)

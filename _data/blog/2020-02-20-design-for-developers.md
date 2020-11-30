@@ -3,7 +3,7 @@ template: BlogPost
 path: /design-for-developers
 date: 2020-08-03T14:59:36.571Z
 title: 'Design for Developers: Specific Steps to Improve Your Website Design'
-thumbnail: /assets/image-5.jpg
+thumbnail: /assets/pexels-negative-space-160107.jpg
 ---
 A walkthrough of designing a website element from scratch with specific tips for improving your design.
 
